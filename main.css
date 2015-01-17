@@ -1,0 +1,54 @@
+body {
+  background: #3e4eb8;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+.game-board {
+  padding: 25px;
+}
+
+.grid:before {
+    padding-top: 100%;
+    content: "";
+    width: 0;
+    float: left;
+
+}
+.memory-icons {
+  font-family: "memory-font";
+}
+
+
+.game-tile  {
+  margin: 5px;
+  box-sizing: border-box;
+  padding: 1em;
+  display: inline-block;
+  width: 15%;
+  background: #7884cd;
+  color: white;
+  vertical-align: top;
+  /*overflow: auto;*/
+  border-radius: 0.5em;
+  float: left;
+}
+
+.game-tile:before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+  width: 0;
+  background: red;
+}
+
+.game-tile:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}

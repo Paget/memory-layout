@@ -1,0 +1,54 @@
+body {
+  background: #51cee7;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+
+  font-size: 300%;
+}
+
+h2 {
+  font-family: Arial;
+  font-weight: 100;
+}
+
+
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(8%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}

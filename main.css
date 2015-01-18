@@ -39,16 +39,36 @@ h1 {
   float: left;
 }
 
+.checkbox {
+  opacity: 0;
+}
+.checkbox:checked + span {
+  display: none;
+
+
+
+  /*margin: 5px;
+  box-sizing: border-box;
+  padding: 1em;
+  display: inline-block;
+  width: 15%;
+  background: #7884cd;
+  color: white;
+  vertical-align: top;
+  overflow: auto;
+  border-radius: 0.5em;
+  float: left;*/
+}
+
+.game-tile:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 .game-tile:before {
   content: '';
   float: left;
   padding-top: 100%;
   width: 0;
   background: red;
-}
-
-.game-tile:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
 }

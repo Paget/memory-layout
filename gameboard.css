@@ -3,6 +3,8 @@ body {
   font-family: 'Orbitron', sans-serif;
   font-size: 2em;
   text-align: center;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -11,22 +13,40 @@ h1 {
 
 .game-board {
   padding: 25px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 700px;
 }
 
-.game-tile i {
+.hearts-and-time {
+  color: white;
+  display: inline;
+  font-size: 20px;
+}
+
+.hearts {
+  float: left;
+  padding-left: 1.5%;
+}
+
+.time {
+  float: right;
+  padding-right: 5%;
+}
+
+.all-game-tiles {
+  clear: both;
+}
+
+.game-tile span {
   font-size: 2em;
   position: absolute;
   right: 0;
   left: 0;
   padding-top: 20px;
-}
-
-.grid:before {
-    padding-top: 100%;
-    content: "";
-    width: 0;
-    float: left;
-
 }
 
 .game-tile  {
@@ -46,7 +66,8 @@ h1 {
 .checkbox {
   opacity: 0;
 }
-.checkbox:checked + i {
+
+.checkbox:checked + span {
   display: none;
 }
 
@@ -55,10 +76,10 @@ h1 {
   display: inline-block;
   width: 100%;
 }
+
 .game-tile:before {
   content: '';
   float: left;
   padding-top: 100%;
   width: 0;
-  background: red;
 }

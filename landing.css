@@ -1,3 +1,7 @@
+* {
+  margin: 0 auto;
+}
+
 body {
   background: #51cee7;
   font-family: 'Orbitron', sans-serif;
@@ -5,80 +9,83 @@ body {
   text-align: center;
   color: white;
   width: 1000px;
-  margin: 0 auto;
+  padding-top: 10%;
 }
 
 h1 {
   font-size: 300%;
 }
 
+h1 span:hover {
+  color: yellow;
+}
+
 h2 {
-  font-family: Arial;
+  padding-top: 10px;
+  font-family: sans-serif;
   font-weight: 100;
 }
 
 .btn {
+  padding-top: 5px;
   width:400px;
   height:50px;
-  border:1px solid white;
-  /* margin-left:600px; */
-  /* margin-bottom: 100px; */
-  /* margin-top: 5px; */
-  margin:  0 auto;
+  border:3px solid white;
+  margin-left:600px;
+  margin-bottom: 100px;
+  margin-top: 5px;
+  margin:  60px auto;
 }
 
 .btn a {
-  font-family: Arial;
+  font-family: sans-serif;
   color: white;
   text-decoration: none;
 }
 
+.btn:hover {
+  background: #9ded86;
+  color: white;
+}
+
 .btn.button-easy {
-  /* margin-top: 0; */
-  border-top-width:1px;
-  border-bottom-width:1px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
   -webkit-transform: perspective(300px) rotateY(40deg);
   margin-bottom: 20px;
 }
 
 .btn.button-hard {
   margin-top: 0;
-  border-top-width:1px;
-  border-bottom-width:1px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
   -webkit-transform: perspective(300px) rotateY(-40deg);
 }
 
 .floating {
-  animation-name: floating;
-  -webkit-animation-name: floating;
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
 
-  animation-duration: 3s;
-  -webkit-animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
 
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+
 }
 
-.@keyframes floating {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(0%);
+    -webkit-transform: rotate(-1deg) translateY(-4%);
   }
-  50% {
-    transform: translateY(8%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 
-@-webkit-keyframes floating {
-  0% {
-    -webkit-transform: translateY(0%);
-  }
   50% {
-    -webkit-transform: translateY(8%);
+    -webkit-transform: rotate(0.5deg) translateY(-2%);
   }
   100% {
-    -webkit-transform: translateY(0%);
+    -webkit-transform: rotate(-1deg) translateY(-4%);
   }
 }
